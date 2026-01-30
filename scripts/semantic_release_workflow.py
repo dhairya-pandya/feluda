@@ -130,7 +130,7 @@ class PackageVersionManager:
             lower_message = message.lower()
 
             # Check for BREAKING CHANGE in footer/body
-            if "breaking change" in lower_message:
+            if "breaking change" in lower_message or "breaking-change" in lower_message:
                 return "major"
 
             # Parse commit type
